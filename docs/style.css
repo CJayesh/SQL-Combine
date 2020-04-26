@@ -2,6 +2,10 @@
     --dark-color: #08002a;
 }
 
+* {
+    font-family: 'Comfortaa', cursive;
+}
+
 body {
     padding: 5px;
     text-align: center;
@@ -12,7 +16,6 @@ h2 {
     margin: 0px;
     margin-bottom: 10px;
     text-align: center;
-    font-family: 'Comfortaa', cursive;
 }
 
 #outputFile {
@@ -47,6 +50,7 @@ h2 {
     padding: 8px;
     font-size: smaller;
     color: white;
+    font-family: 'Comfortaa', cursive;
 }
 
 #copied {
@@ -56,6 +60,7 @@ h2 {
 #fileNames {
     margin-top: 5px;
     text-align: left;
+    font-size: smaller;
 }
 
 .hide {
