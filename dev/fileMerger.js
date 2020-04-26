@@ -8,17 +8,16 @@ function run() {
         const fileNames = document.getElementById('fileNames');
         output.value = '';
         fileNames.textContent = '';
-        
-        for (const file of this.files) {
-            if (allowedExtensions.includes(file.name.split('.').pop()))
-            {
-                readFile(file).then(result => {
-                    output.value += comment.concat(file.name, comment, '\n');
-                    output.value += result.concat('\n\n\n');
-                    fileNames.textContent += file.name.concat('\n');
+
+        let filePromises = Array.from(this.files).map(file => readFile(file));
+        Promise.all(filePromises)
+            .then(responses => {
+                responses.forEach(response => {
+                    output.value += comment.concat(response.name, comment, '\n');
+                    output.value += response.text.concat('\n\n\n');
+                    fileNames.textContent += response.name.concat('\n');
                 });
-            }
-        }
+            });
     });
 }
 
@@ -26,7 +25,8 @@ function readFile(file) {
     return new Promise(resolve => {
         const fileReader = new FileReader();
         fileReader.onload = function() {
-            resolve(fileReader.result.concat('\n\n\n'));
+            const fileData = {name: file.name, text: fileReader.result.concat('\n\n\n')};
+            resolve(fileData);
         };
         fileReader.readAsText(file);
     });
