@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        File Merger
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="./fileMerger.js"></script>
+</head>
+<body onload="run()">
+    <h2>Text File Merger</h2>
+    <textarea id="outputFile"></textarea>
+    <input type="file" id="inputFile" accept=".txt, .sql" multiple>
+    <button id="reset" onclick="reset()">Reset</button>
+    <button id="copy" onclick="copyToClipboard()">Copy to clipboard</button>
+    <span id="copied" class="disable">Copied to clipboard</span>
+    <br>
+    <pre id="fileNames"></pre>
+    
+</body>
+</html>

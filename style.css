@@ -1,0 +1,35 @@
+body {
+    padding: 5px;
+    font-family: 'Comfortaa', cursive;
+}
+
+h2 {
+    margin: 0px;
+    text-align: center;
+}
+
+#outputFile {
+    height: 70vh;
+    overflow: auto;
+    width: 95vw;
+    border: 1px solid;
+    resize: none;
+    white-space: nowrap;
+    font-size: xx-small;
+}
+
+#reset {
+    margin-right: 100px;
+}
+
+#copied {
+    color: green;
+}
+
+#fileNames {
+    margin-top: 5px;
+}
+
+.disable {
+    display: none;
+}
