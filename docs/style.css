@@ -1,10 +1,16 @@
+:root {
+    --dark-color: #08002a;
+}
+
 body {
     padding: 5px;
     text-align: center;
+    color: white;
 }
 
 h2 {
     margin: 0px;
+    margin-bottom: 10px;
     text-align: center;
     font-family: 'Comfortaa', cursive;
 }
@@ -13,23 +19,38 @@ h2 {
     height: 70vh;
     overflow: auto;
     width: 95vw;
-    border: 1px solid;
+    border: none;
     resize: none;
     font-size: xx-small;
+    box-shadow: #2c1b83 -2px -2px 10px 0px, black 6px 6px 6px;
+    border-radius: 4px;
+    color: white;
+    box-sizing: border-box;
+    padding: 8px
 }
 
-.buttons {
+#inputFile {
+    display: none;
+}
+
+.buttons-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    margin-top: 12px;
+    padding: 0 12px 0;
 }
 
-#reset {
-    margin-right: 100px;
+.inputLabel, #reset, #copy {
+    cursor: pointer;
+    box-shadow: #2c1b83 -2px -2px 5px 0px, black 2px 2px 6px;
+    padding: 8px;
+    font-size: smaller;
+    color: white;
 }
 
 #copied {
-    color: green;
+    color: greenyellow;
 }
 
 #fileNames {
@@ -39,4 +60,9 @@ h2 {
 
 .hide {
     visibility: hidden;
+}
+
+.neo {
+    border: none;
+    background-color: var(--dark-color);
 }

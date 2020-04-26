@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="./style.css">
     <script type="text/javascript" src="./fileMerger.js"></script>
 </head>
-<body onload="run()">
+<body onload="run()" class="neo">
     <h2>Text File Merger</h2>
-    <textarea id="outputFile" placeholder="Choose files to merge"></textarea>
-    <div class="buttons">
+    <textarea id="outputFile" placeholder="Choose files to merge" class="neo"></textarea>
+    <div class="buttons-container">
+        <label for="inputFile" class="inputLabel neo">Choose Files</label>
         <input type="file" id="inputFile" accept=".txt, .sql" multiple>
-        <button id="reset" onclick="reset()">Reset</button>
-        <button id="copy" onclick="copyToClipboard()">Copy to clipboard</button>
+        <button class="neo" id="reset" onclick="reset()">Reset</button>
+        <button class="neo" id="copy" onclick="copyToClipboard()">Copy to clipboard</button>
         <span id="copied" class="hide">Copied to clipboard</span>
     </div>
     <br>
