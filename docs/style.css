@@ -18,7 +18,7 @@ h2 {
     text-align: center;
 }
 
-#outputFile {
+#outputTextArea {
     height: 70vh;
     overflow: auto;
     width: 95vw;
@@ -30,6 +30,22 @@ h2 {
     color: white;
     box-sizing: border-box;
     padding: 8px
+}
+
+#outputTextArea::-webkit-input-placeholder {
+    color: darkcyan;
+    font-size: large;
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
+
+#outputTextArea::-moz-placeholder {
+    color: darkcyan;
+    font-size: large;
+    text-align: center;
+    position: relative;
+    top: 50%;
 }
 
 #inputFile {
@@ -51,6 +67,10 @@ h2 {
     font-size: smaller;
     color: white;
     font-family: 'Comfortaa', cursive;
+}
+
+.inputLabel:hover, #reset:hover, #copy:hover {
+    color: orange;
 }
 
 #copied {

@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        File Merger
+        Append SQL Files
     </title>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script type="text/javascript" src="./fileMerger.js"></script>
 </head>
 <body onload="run()" class="neo">
-    <h2>Text File Merger</h2>
-    <textarea id="outputFile" placeholder="Choose files to merge" class="neo"></textarea>
+    <h2>Append SQL Files</h2>
+    <textarea id="outputTextArea" placeholder="Choose files to append or drop here" class="neo"></textarea>
     <div class="buttons-container">
         <label for="inputFile" class="inputLabel neo">Choose Files</label>
-        <input type="file" id="inputFile" accept=".txt, .sql" multiple>
+        <input type="file" id="inputFile" accept=".sql" multiple>
         <button class="neo" id="reset" onclick="reset()">Reset</button>
         <button class="neo" id="copy" onclick="copyToClipboard()">Copy to clipboard</button>
         <span id="copied" class="hide">Copied to clipboard</span>
